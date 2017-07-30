@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity implements LoginView, View.OnClickL
     private EditText password;
     private LoginPresenter presenter;
     private ImageView imageView;
-    private TextView lblSigninBtn;
+    private TextView txtSigninBtn;
     private FrameLayout buttonLoginBlock;
     private View reveal;
     ValueAnimator anim;
@@ -46,7 +46,7 @@ public class Login extends AppCompatActivity implements LoginView, View.OnClickL
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
         buttonLoginBlock = (FrameLayout) findViewById(R.id.buttonLoginBlock);
-        lblSigninBtn = (TextView) findViewById(R.id.lblSigninBtn);
+        txtSigninBtn = (TextView) findViewById(R.id.lblSigninBtn);
         reveal = (View) findViewById(R.id.reveal);
         //findViewById(R.id.button).setOnClickListener(this);
         buttonLoginBlock.setOnClickListener(this);
@@ -73,7 +73,7 @@ public class Login extends AppCompatActivity implements LoginView, View.OnClickL
 
 
         progressBar.setVisibility(View.GONE);
-        lblSigninBtn.setVisibility(View.VISIBLE);
+        txtSigninBtn.setVisibility(View.VISIBLE);
 
         buttonLoginBlock.getMeasureAllChildren();
 
@@ -171,7 +171,7 @@ public class Login extends AppCompatActivity implements LoginView, View.OnClickL
     private void fadeOutTextAndProgressDialog() {
 
 
-        lblSigninBtn.animate().alpha(0f)
+        txtSigninBtn.animate().alpha(0f)
                 .setDuration(250)
                 .setListener(new AnimatorListenerAdapter() {
                     @Override
